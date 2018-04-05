@@ -32,6 +32,7 @@ export function D() {
 	this.prop = () => "ok";
 }
 
+// See https://github.com/webpack/webpack/issues/6379
 export const E = {
 	x: "bar",
 	foo(x = this.x) {
@@ -39,6 +40,7 @@ export const E = {
 	}
 };
 
+// See https://github.com/webpack/webpack/issues/6967
 export const F = (function() {
   return this;
 }.call("ok"));
